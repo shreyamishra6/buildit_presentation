@@ -68,18 +68,22 @@ export function VideoSection() {
       {/* Instructional text — you can change or remove this. */}
       <div className="mb-10 pr-6 md:pr-12 max-w-3xl">
         <p className="font-mono text-sm text-muted-foreground leading-relaxed">
-          Watch our PocketLog demo showing the Problem → Solution → MVP → Demo flow. See how easy it is to track daily expenses and build better spending habits.
+          Watch our PocketLog review video...
         </p>
       </div>
 
       {/* Video placeholder — replace this whole div with an <iframe> when you have your video embed URL. */}
       <div
         ref={videoWrapperRef}
-        className="relative w-full max-w-4xl pr-6 md:pr-12 aspect-video bg-card border border-border/50 flex items-center justify-center"
+        className="relative w-full max-w-sm mx-auto aspect-[9/16] bg-black border border-border/50 shadow-2xl overflow-hidden rounded-xl"
       >
-        <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
-          Video placeholder — add your review video embed URL here
-        </p>
+        <iframe
+          src="https://www.youtube.com/embed/efpfREcy44w"
+          title="PocketLog Review - Dilip Mishra"
+          className="absolute inset-0 w-full h-full"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
       </div>
     </section>
   )

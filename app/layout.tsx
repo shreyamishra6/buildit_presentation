@@ -18,9 +18,12 @@ const ibmPlexMono = IBM_Plex_Mono({
 const bebasNeue = Bebas_Neue({ weight: "400", subsets: ["latin"], variable: "--font-bebas" })
 
 export const metadata: Metadata = {
-  title: "BUILDIT — Build Skills. Build Projects. Build Proof.",
+  title: "PocketLog — Track Daily. Spend Wisely.",
   description:
-    "Template: tinker and change texts as per your project. Includes problems, solution, project review video, MVP (at least 4), revenue model, credits, and feedback form.",
+    "A lightweight daily expense tracker built for the Fantastic-4 Hackathon. Log expenses in seconds, build better habits, and gain financial clarity.",
+  icons: {
+    icon: "/logo.png",
+  },
 }
 
 export default function RootLayout({
