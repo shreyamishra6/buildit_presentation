@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import { cn } from "@/lib/utils"
 
 const navItems = [
-  { id: "hero", label: "POCKETLOG" },
+  { id: "hero", label: <img src="/logo.png" alt="PocketLog" className="w-8 h-8 rounded-full" /> },
   { id: "signals", label: "PROBLEMS BEING ADDRESSED" },
   { id: "work", label: "SOLUTION" },
   { id: "video", label: "VIDEO" },
