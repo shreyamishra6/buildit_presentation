@@ -17,18 +17,18 @@ const leanCanvasSections = [
       {
         title: "Top 3 Problems:",
         points: [
-          "Students watch hours of tutorials but freeze when building independently",
-          "Most learners collect courses instead of skills, mistaking progress for productivity",
-          "Anyone can write 'proficient in X,' but very few can actually prove it",
+          "Small daily expenses go unnoticed, leading to poor spending awareness",
+          "Users exceed budgets without realizing until it's too late",
+          "Existing finance apps require complex bank integrations, discouraging use",
         ],
       },
       {
         title: "Existing Alternatives:",
         points: [
-          "Online courses (Udemy, Coursera)",
-          "Tutorial videos (YouTube, freeCodeCamp)",
-          "Bootcamps",
-          "University degrees",
+          "Bank transaction statements (cluttered, delayed)",
+          "Complex finance apps (Mint, YNAB)",
+          "Spreadsheets (manual, time-consuming)",
+          "Mental tracking (unreliable)",
         ],
       },
     ],
@@ -40,9 +40,9 @@ const leanCanvasSections = [
       {
         title: "Top 3 Features:",
         points: [
-          "Project-based learning with real-world projects",
-          "Mentor-guided development and code reviews",
-          "Verified portfolio generation from actual contributions",
+          "Quick expense entry in under 10 seconds",
+          "Category-wise spending breakdown",
+          "Daily and weekly spending summaries",
         ],
       },
     ],
@@ -54,13 +54,13 @@ const leanCanvasSections = [
       {
         title: "",
         points: [
-          "Build Skills. Build Projects. Build Proof.",
-          "Learn by doing, not just watching",
-          "Verified skills through real project contributions",
+          "Track Daily. Spend Wisely. Build Awareness.",
+          "Log expenses in seconds, not minutes",
+          "No bank integrations needed — just simple manual entry",
           "Why this matters:",
-          "Portfolio > Resume",
-          "Code doesn't lie",
-          "Emotional benefit: Confidence through proof",
+          "Clarity over complexity",
+          "Habit-building over analysis paralysis",
+          "Emotional benefit: Control through awareness",
         ],
       },
     ],
@@ -72,10 +72,10 @@ const leanCanvasSections = [
       {
         title: "",
         points: [
-          "Two-sided network: Students + Mentors + Recruiters",
-          "GitHub-based verification system",
-          "Real project portfolio generation",
-          "Direct path from learning to hiring",
+          "Ultra-simple UX focused on speed",
+          "No setup friction — start tracking immediately",
+          "Designed for habit formation, not financial planning",
+          "Mobile-first, lightweight experience",
         ],
       },
     ],
@@ -87,19 +87,19 @@ const leanCanvasSections = [
       {
         title: "Target Customers:",
         points: [
-          "Computer science students",
-          "Career switchers",
-          "Self-taught developers",
-          "Recent graduates",
+          "College students",
+          "Young professionals",
+          "Individuals managing personal expenses",
+          "Users who want simple alternatives to complex apps",
         ],
       },
       {
         title: "Early Adopters:",
         points: [
-          "Students at MUJ (Manipal University Jaipur)",
-          "TechStar SWJ'26 participants",
-          "Active GitHub users",
-          "People already building side projects",
+          "Budget-conscious students",
+          "People frustrated with complex finance apps",
+          "First-time expense trackers",
+          "Minimalists who prefer simple tools",
         ],
       },
     ],
@@ -111,12 +111,12 @@ const leanCanvasSections = [
       {
         title: "",
         points: [
-          "Projects completed per student",
-          "Code contributions per project",
-          "Mentor review response time",
-          "Student retention rate",
-          "Portfolio views by recruiters",
-          "Job placement rate",
+          "Time to log expense (target: <10 seconds)",
+          "Daily active users",
+          "Expenses logged per user per day",
+          "User retention rate (7-day, 30-day)",
+          "Category breakdown accuracy",
+          "Premium conversion rate",
         ],
       },
     ],
@@ -128,11 +128,11 @@ const leanCanvasSections = [
       {
         title: "Path to Customers:",
         points: [
-          "University partnerships (starting with MUJ)",
-          "TechStar program integration",
+          "App stores (iOS, Android)",
+          "Social media (Instagram, Twitter)",
+          "Personal finance communities",
           "Word of mouth from early adopters",
-          "GitHub community engagement",
-          "Tech community events and hackathons",
+          "University student groups",
         ],
       },
     ],
@@ -144,11 +144,11 @@ const leanCanvasSections = [
       {
         title: "",
         points: [
-          "Platform development and maintenance",
-          "Mentor compensation",
-          "Payment processing fees",
+          "Platform development and hosting",
+          "UI/UX design and improvements",
+          "Marketing and user acquisition",
           "Customer support",
-          "Marketing and partnerships",
+          "Payment processing (for premium)",
         ],
       },
     ],
@@ -160,19 +160,19 @@ const leanCanvasSections = [
       {
         title: "",
         points: [
-          "Project-based commission from enrollment fees",
-          "Pro subscription (AI-powered features)",
-          "Paid mentorship support",
-          "Micro-revenue streams (certifications, premium tools)",
+          "Free plan: Basic expense tracking for all users",
+          "Premium subscription: Budget analytics, monthly reports, data export",
+          "Fintech partnerships: Integration revenue potential",
           "Key Numbers:",
-          "Revenue per project enrollment",
-          "Gross margin per subscription",
-          "Lifetime value of active learners",
+          "Monthly subscription price",
+          "Premium user conversion rate",
+          "Lifetime value per premium user",
         ],
       },
     ],
   },
 ]
+
 
 export function LeanCanvasSection() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -224,7 +224,7 @@ export function LeanCanvasSection() {
   // Handle ESC key to close expanded section
   useEffect(() => {
     if (!expandedSection) return
-    
+
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         setExpandedSection(null)
@@ -259,6 +259,7 @@ export function LeanCanvasSection() {
         >
           <div
             className="relative w-full max-w-4xl max-h-[90vh] overflow-auto bg-card border border-border/50 rounded-lg p-6 md:p-12 shadow-2xl"
+            data-lenis-prevent
             onClick={(e) => e.stopPropagation()}
           >
             <button
@@ -314,7 +315,8 @@ export function LeanCanvasSection() {
       {/* Lean Canvas Grid - 3x3 layout matching the image */}
       <div
         ref={gridRef}
-        className="flex-1 max-w-full mx-auto grid grid-cols-1 md:grid-cols-5 gap-2 md:gap-3 border border-border/30 bg-background p-2 md:p-3 overflow-y-auto md:overflow-auto"
+        data-lenis-prevent
+        className="flex-1 min-h-0 max-w-full mx-auto grid grid-cols-1 md:grid-cols-5 gap-2 md:gap-3 border border-border/30 bg-background p-2 md:p-3 overflow-y-auto md:overflow-auto"
         style={{
           backgroundImage: `
             linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px),

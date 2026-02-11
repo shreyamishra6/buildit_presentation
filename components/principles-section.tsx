@@ -22,51 +22,46 @@ export function PrinciplesSection() {
     {
       number: "01",
       titleParts: [
-        { text: "MVP 1: Project-Based ", highlight: false },
-        { text: "LEARNING", highlight: true },
-        { text: " Core", highlight: false },
+        { text: "MVP 1: Quick Expense ", highlight: false },
+        { text: "ENTRY", highlight: true },
       ],
-      description: "Project listing by mentors • Student project enrollment • Basic task structure • GitHub-based submissions • Manual review & feedback",
+      description: "Amount • Category (Food, Travel, Bills, Shopping, Misc) • Optional note • Date (defaults to today)",
       align: "left",
     },
     {
       number: "02",
       titleParts: [
-        { text: "MVP 2: ", highlight: false },
-        { text: "MENTORSHIP", highlight: true },
-        { text: " & Progress Tracking", highlight: false },
+        { text: "MVP 2: Expense ", highlight: false },
+        { text: "HISTORY", highlight: true },
       ],
-      description: "Mentor–student assignment • Weekly progress check-ins • Simple skill tagging • Completion status tracking",
+      description: "View expenses in chronological order • Filter by category • Filter by date range",
       align: "right",
     },
     {
       number: "03",
       titleParts: [
-        { text: "MVP 3: ", highlight: false },
-        { text: "PORTFOLIO", highlight: true },
-        { text: " Generation", highlight: false },
+        { text: "MVP 3: Category ", highlight: false },
+        { text: "BREAKDOWN", highlight: true },
       ],
-      description: "Auto-generated project portfolio • Tech stack display • Contribution summary • Shareable profile link",
+      description: "Visual summary of spending per category • Simple chart or list-based visualization • Identify spending patterns",
       align: "left",
     },
     {
       number: "04",
       titleParts: [
-        { text: "MVP 4: ", highlight: false },
-        { text: "RECRUITER", highlight: true },
-        { text: " View (Lite Version)", highlight: false },
+        { text: "MVP 4: Daily & Weekly ", highlight: false },
+        { text: "SUMMARY", highlight: true },
       ],
-      description: "View verified projects • Skill-based filtering • Contact / shortlist option",
+      description: "\"You spent ₹450 today\" • \"Top category this week: Food\" • \"Total weekly spend: ₹2,300\"",
       align: "right",
     },
     {
       number: "05",
       titleParts: [
-        { text: "MVP 5: ", highlight: false },
-        { text: "MONETIZATION", highlight: true },
-        { text: " Layer", highlight: false },
+        { text: "MVP 5 (Bonus): Budget ", highlight: false },
+        { text: "INDICATOR", highlight: true },
       ],
-      description: "Project-based enrollment fee • Mentor payout system • Basic admin controls",
+      description: "Set a daily spending limit • UI warning when limit is crossed • Encourages mindful spending",
       align: "left",
     },
   ]
@@ -127,9 +122,8 @@ export function PrinciplesSection() {
         {mvps.map((mvp, index) => (
           <article
             key={index}
-            className={`flex flex-col ${
-              mvp.align === "right" ? "items-end text-right" : "items-start text-left"
-            }`}
+            className={`flex flex-col ${mvp.align === "right" ? "items-end text-right" : "items-start text-left"
+              }`}
           >
             {/* Annotation label — e.g. "01 / MVP". */}
             <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground mb-4">

@@ -15,33 +15,23 @@ gsap.registerPlugin(ScrollTrigger)
 const signals = [
   {
     date: "",
-    title: "Learning Without Doing",
-    note: "Students watch hours of tutorials but freeze the moment they have to build something on their own.",
+    title: "Poor Spending Awareness",
+    note: "Small daily expenses like food, travel, and subscriptions go unnoticed, making it hard to understand where money actually goes.",
   },
   {
     date: "",
-    title: "Tutorial Hell Is the New Degree",
-    note: "Most learners collect courses instead of skills, mistaking progress for productivity.",
+    title: "Budget Overruns",
+    note: "Without real-time visibility, users frequently exceed their budgets without realizing until it's too late.",
   },
   {
     date: "",
-    title: "Resumes Lie, Code Doesn't",
-    note: "Anyone can write \"proficient in X,\" but very few can actually prove it.",
+    title: "No Pattern Visibility",
+    note: "Identifying spending patterns is difficult when transactions are scattered across bank statements and payment apps.",
   },
   {
     date: "",
-    title: "Mentorship Is Either Missing or Useless",
-    note: "Students either get no guidance or get spoon-fed without real learning.",
-  },
-  {
-    date: "",
-    title: "Hiring Is a Guessing Game",
-    note: "Companies are forced to trust resumes and interviews instead of real work.",
-  },
-  {
-    date: "",
-    title: "Talent Exists, Direction Doesn't",
-    note: "Capable students and graduates have skills—but no clear path to apply or showcase them.",
+    title: "Complex Alternatives",
+    note: "Existing finance apps require bank integrations and complex setups, discouraging consistent daily usage.",
   },
 ]
 

@@ -15,20 +15,16 @@ gsap.registerPlugin(ScrollTrigger)
 /** Your revenue ideas. Each item becomes one card in the horizontal scroll. */
 const revenueModels = [
   {
-    title: "Project-Based Commission",
-    description: "The platform earns a commission from the project enrollment fee paid by learners.",
+    title: "Free Plan",
+    description: "Basic expense tracking for all users — log expenses, view summaries, and categorize spending at no cost.",
   },
   {
-    title: "Pro Subscription (AI-Powered Features)",
-    description: "Users can upgrade to a premium plan to access AI-assisted learning tools, code insights, and progress analytics.",
+    title: "Premium Subscription",
+    description: "Unlock advanced features: budget analytics, detailed monthly reports, and data export capabilities.",
   },
   {
-    title: "Paid Mentorship Support",
-    description: "Learners can opt for additional one-on-one or on-demand mentor assistance for specific technical challenges.",
-  },
-  {
-    title: "Micro-Revenue Streams",
-    description: "Small-value earnings generated through add-ons such as certifications, advanced project access, and premium learning tools.",
+    title: "Fintech Partnerships",
+    description: "Potential integrations with financial platforms for enhanced features and partnership revenue.",
   },
 ]
 
