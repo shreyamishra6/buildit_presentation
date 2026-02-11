@@ -104,13 +104,11 @@ export function HeroSection() {
             href="/lean-canvas"
             className="group inline-flex items-center justify-center gap-3 border border-foreground/20 px-6 py-3 font-mono text-xs uppercase tracking-widest text-foreground hover:border-accent hover:text-accent transition-all duration-200"
           >
-            <ScrambleTextOnHover text="SEE FEATURES" as="span" duration={0.6} />
+            <ScrambleTextOnHover text="LEAN CANVAS" as="span" duration={0.6} />
             <BitmapChevron className="transition-transform duration-[400ms] ease-in-out group-hover:rotate-45" />
           </a>
           <a
-            href="https://swj.builditmuj.club"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/coming-soon"
             className="group inline-flex items-center justify-center gap-3 border border-foreground/20 px-6 py-3 font-mono text-xs uppercase tracking-widest text-foreground hover:border-accent hover:text-accent transition-all duration-200"
           >
             <ScrambleTextOnHover text="PROTOTYPE" as="span" duration={0.6} />

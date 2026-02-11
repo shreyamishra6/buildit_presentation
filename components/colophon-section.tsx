@@ -109,12 +109,13 @@ export function ColophonSection() {
         </div>
 
         {/* Special Thanks — mentors, professors, facilitators. */}
-        <div className="col-span-1">
-          <h4 className="font-mono text-[9px] uppercase tracking-[0.3em] text-muted-foreground mb-4">SPECIAL THANKS TO</h4>
-          <ul className="space-y-2">
-            <li className="font-mono text-xs text-foreground/80">Hackathon Mentors</li>
-          </ul>
-        </div>
+
+        {/* <div className="col-span-1"> */}
+        {/* <h4 className="font-mono text-[9px] uppercase tracking-[0.3em] text-muted-foreground mb-4">SPECIAL THANKS TO</h4> */}
+        {/* <ul className="space-y-2"> */}
+        {/* <li className="font-mono text-xs text-foreground/80"></li> */}
+        {/* </ul> */}
+        {/* </div> */}
       </div>
 
       {/* Bottom copyright — change the text to your team name and tagline. */}

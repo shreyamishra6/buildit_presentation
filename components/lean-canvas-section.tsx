@@ -259,6 +259,7 @@ export function LeanCanvasSection() {
         >
           <div
             className="relative w-full max-w-4xl max-h-[90vh] overflow-auto bg-card border border-border/50 rounded-lg p-6 md:p-12 shadow-2xl"
+            data-lenis-prevent
             onClick={(e) => e.stopPropagation()}
           >
             <button
@@ -314,7 +315,8 @@ export function LeanCanvasSection() {
       {/* Lean Canvas Grid - 3x3 layout matching the image */}
       <div
         ref={gridRef}
-        className="flex-1 max-w-full mx-auto grid grid-cols-1 md:grid-cols-5 gap-2 md:gap-3 border border-border/30 bg-background p-2 md:p-3 overflow-y-auto md:overflow-auto"
+        data-lenis-prevent
+        className="flex-1 min-h-0 max-w-full mx-auto grid grid-cols-1 md:grid-cols-5 gap-2 md:gap-3 border border-border/30 bg-background p-2 md:p-3 overflow-y-auto md:overflow-auto"
         style={{
           backgroundImage: `
             linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px),
